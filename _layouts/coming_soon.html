@@ -1,0 +1,17 @@
+---
+layout: blank
+---
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+</style>
+<div class="container">
+    <h1 class="post-title">{{ page.title  | escape }}</h1>
+    <h2>{{ page.subtitle | escape }}</h2>
+    <div class="post-content">
+        <img src="{{ site.coming_soon_img }}" alt="See you all soon!!" style="width: 100%; height: auto;">
+    </div>
+</div>
