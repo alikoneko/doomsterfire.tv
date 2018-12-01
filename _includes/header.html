@@ -7,7 +7,7 @@
     <div class="site-brand">
       <img src="{{ site.brand.img }}" alt="{{ site.brand.alt_text }}">
       <div>
-        <a class="site-title" rel="author" href="{{ "/" | relative_url }}"> <img src="{{ site.brand.weapon }}"> {{ site.title | escape }}</a>
+        <a class="site-title radio" rel="author" href="{{ "/" | relative_url }}"> <img src="{{ site.brand.weapon }}"> {{ site.title | escape }}</a><span></span>
       </div>
 
     </div>
@@ -37,7 +37,9 @@
           {%- assign my_page = site.pages | where: "path", path | first -%}
           {%- if my_page.title -%}
           <!-- todo iterate thru titles and assign them an icon -->
-          <a class="page-link" href="{{ my_page.url | relative_url }}"><img src="{{ site.settings.about.closed }}">{{ my_page.title | escape }}</a>
+          <div>
+            <a class="page-link radio" href="{{ my_page.url | relative_url }}"><img src="{{ site.settings.about.closed }}">{{ my_page.title | escape }}</a><span></span>
+          </div>
           {%- endif -%}
         {%- endfor -%}
       </nav>
