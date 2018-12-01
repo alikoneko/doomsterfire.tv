@@ -25,6 +25,12 @@ coming_soon_img: assets/img/doom.png
 brand:
   img: assets/img/logo_temp.png
   alt_text: Doomster Fire!
+  weapon: assets/img/shield_03e.png
+
+settings:
+  about:
+    closed: assets/img/spellbook_03e.png
+    open: assets/img/spellbook_06e.png
 
 # Build settings
 markdown: kramdown
