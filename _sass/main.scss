@@ -1,0 +1,43 @@
+$text-color: #dfe6e9;
+$body-color: #2d3436;
+
+body {
+    background-color: $body-color;
+}
+
+.is-dark {
+
+    .title {
+        background-color: $body-color !important;
+        color: $text-color !important;
+    }
+
+    &:before, &:after {
+        background-color: $body-color;
+    }
+
+    &:after {
+        border-color: $text-color;
+    }
+
+}
+
+header {
+    margin: 1% 2% 0 2%;
+    display: flex;
+    justify-content: center;
+
+    div {
+        width: 80%;
+        display: flex;
+
+        .site-brand {
+            display: flex;
+            align-items: center;
+            img {
+                width: 5%;
+                height: auto;
+            }
+        }
+    }
+}
