@@ -31,7 +31,8 @@
     cursor: pointer;
   }
 
-  &:checked + span::before {
+  &:checked + span::before,
+  &:hover + span::before {
     position: absolute;
     top: -2px;
     left: -20px;
@@ -47,7 +48,14 @@
     }
   }
 
-  &:checked:focus + span::before {
+
+  &:hover + span::before {
+    top: 2px;
+    animation: blink 1s infinite steps(1);
+  }
+
+  &:checked:focus + span::before,
+  &:hover + span::before {
     @include pixelize($radio-checked-focus, $colors, 2px);
   }
 }

@@ -1,13 +1,20 @@
+@import "nes";
+
 $text-color: #dfe6e9;
 $body-color: #2d3436;
 
 // global styles applied to the whole body of the doc
 body {
+
     background-color: $body-color;
 
     a {
         color: $text-color;
 
+        &:hover {
+            text-decoration: none;
+            color: $text-color;
+        }
     }
 }
 
@@ -44,8 +51,19 @@ header {
                 width: 5%;
                 height: auto;
             }
+        }
+    }
+    nav {
+        align-self: center;
+    }
 
-            .site-title {
+    .site-brand, nav {
+
+        div {
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+
+            .site-title, .page-link {
                 display: flex;
                 align-items: center;
 
@@ -53,15 +71,7 @@ header {
                     width: auto;
                     padding-right: 5px;
                 }
-            }
-        }
-    }
-    nav {
-        align-self: center;
 
-        .page-link {
-            img {
-                padding-right: 5px;
             }
         }
     }
