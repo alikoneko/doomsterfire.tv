@@ -17,10 +17,16 @@
       </section>
       <section class="container is-dark with-title is-center" id="panel2">
           <h2 class="title">{{ site.settings.footer.panel2.title }}</h2>
+          <div>
+            <ul>
+              <li><a class="page-link radio" target="_blank" href="https://twitter.com/{{site.settings.footer.panel2.twitter}}"><i class="icon twitter"></i>@doomsterfire</a><span></span></li>
+              <li><a class="page-link radio" target="_blank" href="https://twitch.tv/{{site.settings.footer.panel2.twitch}}"><i class="snes-logo"></i>Twitch.tv</a><span></span>
+            </ul>
+          </div>
       </section>
       <section class="container is-dark with-title is-center" id="panel3">
           <h2 class="title">{{ site.settings.footer.panel3.title }}</h2>
-          <p><a href="https://discord.gg/YFVTfRb" target="_blank" class="page-link radio"><img src="{{ site.settings.footer.panel3.img }}">{{ site.settings.footer.panel3.text }}</a><span></span></p>
+          <p><a href="https://discord.gg/YFVTfRb" target="_blank" class="page-link radio"><img src="{{ site.settings.footer.panel3.img }}">&nbsp;{{ site.settings.footer.panel3.text }}</a><span></span></p>
       </section>
   </section>
 </footer>
