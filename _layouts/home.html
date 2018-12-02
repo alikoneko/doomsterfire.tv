@@ -16,7 +16,7 @@ layout: default
     {%- endif -%}
     <article class="container is-rounded is-dark is-centered with-title">
       <h2 class="title"><a class="page-link radio quest-title" href="{{post.url | relative_url }}">{{ post.title }}<img src="{{ "/assets/img/gift_01e.png" | relative_url }}" ></a><span></span></h2>
-      {{ post.excerpt }}
+      {{ post.excerpt | strip_html | strip_newlines | truncate: 280 }}
     </article>
     {%- if mod == '0' or forloop.last -%}
   </div>
