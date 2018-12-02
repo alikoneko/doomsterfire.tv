@@ -6,6 +6,25 @@ layout: default
 {%- endif -%}
 
 {{ content }}
+<!-- TODO: make this less dumb -->
+<!-- TODO: cycle thru "loot" by title -->
+{%- if site.posts.size > 0-%}
+  {%- for post in site.posts -%}
+   {%- capture mod -%} {{ forloop.index | modulo: 3 }}{%- endcapture -%}
+   {%- if mod == '1' or forloop.first -%}
+    <div class="row">
+    {%- endif -%}
+    <article class="container is-rounded is-dark is-centered with-title">
+      <h2 class="title"><a class="page-link radio quest-title" href="{{post.url | relative_url }}">{{ post.title }}<img src="{{ "/assets/img/gift_01e.png" | relative_url }}" ></a><span></span></h2>
+      {{ post.excerpt }}
+    </article>
+    {%- if mod == '0' or forloop.last -%}
+  </div>
+    {%- endif -%}
+  {%- endfor -%}
+
+{%- endif -%}
+
 <!--
 
   {{ content }}
