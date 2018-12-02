@@ -196,4 +196,21 @@ main {
             }
         }
     }
+// TODO: code blocks
+
+    article {
+        color: $text-color;
+
+        .post-title {
+            display: none; //just for RSS feeds, name of post is name of page and already at the top of the container
+        }
+
+        a {
+            color: $gold;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
 }
