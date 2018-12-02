@@ -27,27 +27,81 @@ body {
         width: 100%;
         height: auto;
     }
+
+    .container {
+
+        .is-dark {
+
+            .title {
+                background-color: $body-color !important;
+                color: $text-color !important;
+            }
+
+            &:before, &:after {
+                background-color: $body-color;
+
+            }
+
+            &:after {
+                border-color: $text-color;
+            }
+
+        }
+    }
 }
 
-.container {
 
-    .is-dark {
+header {
+    margin: 1% 2% 0 2%;
 
-        .title {
-            background-color: $body-color !important;
-            color: $text-color !important;
+    div {
+        display: flex;
+
+        .site-brand {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex: 1;
+
+            img {
+                width: 15%;
+                height: auto;
+            }
         }
-
-        &:before, &:after {
-            background-color: $body-color;
-
-        }
-
-        &:after {
-            border-color: $text-color;
-        }
-
     }
+    nav {
+        align-self: center;
+        display: flex;
+        flex: 2;
+        justify-content: flex-end;
+    }
+
+    .site-brand, nav {
+
+        div {
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+
+            .site-title, .page-link {
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: auto;
+                    padding-right: 5px;
+                }
+
+            }
+        }
+    }
+}
+
+footer {
+    justify-self: flex-end;
+    margin: 0 2% 1% 2%;
+    padding-bottom: 10px;
+    display: flex !important;
+    flex-direction: row !important;
 
     > section {
         background-color: transparent!important;
@@ -71,7 +125,7 @@ body {
         }
 
         > #panel2 {
-            // flex: 1;
+            flex: 0;
 
             ul {
                 list-style: none;
@@ -82,6 +136,7 @@ body {
                 li {
                     display: flex;
                     flex-direction: row-reverse;
+                    padding: 5px 0;
 
                     a {
                         display: flex;
@@ -89,6 +144,10 @@ body {
 
                         i {
                             padding-right: 50px;
+                        }
+
+                        img {
+                            width: 15%;
                         }
                     }
                 }
@@ -98,79 +157,17 @@ body {
         > #panel3 {
             flex: 1;
 
-           img {
-               width: 10%;
-               padding-right: 5px;
-           }
-
-           p {
-               display: flex;
-               flex-direction: row-reverse;
-           }
-        }
-    }
-}
-
-header {
-    margin: 1% 2% 0 2%;
-
-    div {
-        display: flex;
-
-        .site-brand {
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-
             img {
-                width: 15%;
-                height: auto;
+                width: 10%;
+                padding-right: 5px;
             }
-        }
-    }
-    nav {
-        align-self: center;
-    }
 
-    .site-brand, nav {
-
-        div {
-            flex-direction: row-reverse;
-            justify-content: flex-end;
-
-            .site-title, .page-link {
+            p {
                 display: flex;
-                align-items: center;
-
-                img {
-                    width: auto;
-                    padding-right: 5px;
-                }
-
+                flex-direction: row-reverse;
             }
         }
     }
-
-    .site-brand {
-        display: flex;
-        flex: 1;
-
-        img {
-            flex: 1;
-        }
-    }
-
-    nav {
-        display: flex;
-        flex: 2;
-        justify-content: flex-end;
-    }
-}
-
-footer {
-    justify-self: flex-end;
-    margin: 0 2% 1% 2%;
-    padding-bottom: 10px;
 }
 
 main {
