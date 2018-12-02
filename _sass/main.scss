@@ -1,12 +1,18 @@
 @import "nes";
 
-$text-color: #dfe6e9;
+$text-color: #dfe6e9; //also border color
 $body-color: #2d3436;
 
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
 // global styles applied to the whole body of the doc
 body {
-
+    min-height: 100%;
     background-color: $body-color;
+    display: flex;
+    flex-direction: column;
 
     a {
         color: $text-color;
@@ -16,23 +22,66 @@ body {
             color: $text-color;
         }
     }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
 }
 
-.is-dark {
+.container {
 
-    .title {
-        background-color: $body-color !important;
-        color: $text-color !important;
+    .is-dark {
+
+        .title {
+            background-color: $body-color !important;
+            color: $text-color !important;
+        }
+
+        &:before, &:after {
+            background-color: $body-color;
+
+        }
+
+        &:after {
+            border-color: $text-color;
+        }
+
     }
 
-    &:before, &:after {
-        background-color: $body-color;
-    }
+    > section {
+        background-color: transparent!important;
+        display: flex;
+        color: $text-color;
 
-    &:after {
-        border-color: $text-color;
-    }
+        > #panel1 {
 
+            > div {
+                display: flex;
+
+                div {
+                    flex: 2;
+                }
+
+                > div:first-child {
+                    flex: 1;
+                }
+            }
+        }
+
+        > #panel3 {
+
+           img {
+               width: 15%;
+               padding-right: 5px;
+           }
+
+           p {
+               display: flex;
+               flex-direction: row-reverse;
+           }
+        }
+    }
 }
 
 header {
@@ -75,4 +124,14 @@ header {
             }
         }
     }
+}
+
+footer {
+    justify-self: flex-end;
+    margin: 1% 2% 1% 2%;
+    padding-bottom: 10px;
+}
+
+main {
+    flex: 1;
 }

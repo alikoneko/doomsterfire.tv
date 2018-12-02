@@ -31,6 +31,30 @@ settings:
   about:
     closed: assets/img/spellbook_03e.png
     open: assets/img/spellbook_06e.png
+  footer:
+    title: Available Party Members
+    panel1:
+      title: Character Info
+      name: Doom
+      class: Acolyte
+      level: 30
+      img: assets/img/cs_doom.png
+      bio_short: Loyal cultist of the ever burning Dumpster Fire.
+      inventory:
+        item1: +1 Battle Axe of DOOM
+        item2: Kite Shield
+        item3: Health Potion
+    panel2:
+      title: Recruit me
+      text: Recruit me to your party!
+      twitter: doomsterfire
+      twitch: doomsterfire
+    panel3:
+      title: Guilds
+      link: https://discord.gg/GkNdyDd
+      text:  Low Sodium Coalition
+      img: assets/img/lsc.png
+
 
 # Build settings
 markdown: kramdown

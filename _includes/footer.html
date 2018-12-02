@@ -1,9 +1,35 @@
-<footer class="site-footer h-card">
+<footer class="container is-dark with-title">
+  <h2 class="title">{{ site.settings.footer.title | escape }}</h2>
+  <section>
+      <section class="container is-dark with-title is-center" id="panel1">
+        <h2 class="title">{{ site.settings.footer.panel1.title }}</h2>
+        <div>
+          <div><img src={{ site.settings.footer.panel1.img }}></div>
+          <div>
+            <ul>
+              <li>Name: {{ site.settings.footer.panel1.name }}</li>
+              <li>Class: {{ site.settings.footer.panel1.class }}</li>
+              <li>Level: {{ site.settings.footer.panel1.level }}</li>
+              <li>Bio: {{ site.settings.footer.panel1.bio_short }}</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="container is-dark with-title is-center" id="panel2">
+          <h2 class="title">{{ site.settings.footer.panel2.title }}</h2>
+      </section>
+      <section class="container is-dark with-title is-center" id="panel3">
+          <h2 class="title">{{ site.settings.footer.panel3.title }}</h2>
+          <p><a href="https://discord.gg/YFVTfRb" target="_blank" class="page-link radio"><img src="{{ site.settings.footer.panel3.img }}">{{ site.settings.footer.panel3.text }}</a><span></span></p>
+      </section>
+  </section>
+</footer>
+<!--<footer class="site-footer h-card">
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
-  <div class="wrapper">
+  <div class="container is-dark">
 
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
+
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
@@ -31,4 +57,4 @@
 
   </div>
 
-</footer>
+</footer>-->
