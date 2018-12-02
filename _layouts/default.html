@@ -7,10 +7,11 @@
 
     {%- include header.html -%}
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
+    <main class="container is-dark with-title" aria-label="Content">
+      {%- if page.title -%}
+      <h2 class="title">{{ page.title }}</h2>
+      {%- endif -%}
+      {{ content }}
     </main>
 
     {%- include footer.html -%}

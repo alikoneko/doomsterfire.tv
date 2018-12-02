@@ -22,6 +22,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: doomsterfire
 coming_soon_img: assets/img/doom.png
+show_excerpts: true
 brand:
   img: assets/img/logo_temp.png
   alt_text: Doomster Fire!
