@@ -6,28 +6,21 @@ layout: default
 {%- endif -%}
 
 {{ content }}
-<!--
+<!-- TODO: make this less dumb -->
+<!-- TODO: cycle thru "loot" by title -->
+{%- if site.posts.size > 0-%}
+  {%- for post in site.posts -%}
+   {%- capture mod -%} {{ forloop.index | modulo: 3 }}{%- endcapture -%}
+   {%- if mod == '1' or forloop.first -%}
+    <div class="row">
+    {%- endif -%}
+    <article class="container is-rounded is-dark is-centered with-title">
+      <h2 class="title"><a class="page-link radio quest-title" href="{{post.url | relative_url }}">{{ post.title }}<img src="{{ "/assets/img/gift_01e.png" | relative_url }}" ></a><span></span></h2>
+      {{ post.excerpt }}
+    </article>
+    {%- if mod == '0' or forloop.last -%}
+  </div>
+    {%- endif -%}
+  {%- endfor -%}
 
-  {{ content }}
-
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
-  {%- endif -%}
-
-</div>-->
+{%- endif -%}
