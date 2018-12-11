@@ -16,16 +16,22 @@
 
     {%- if titles_size > 0 -%}
       <!-- todo responsive bullshit for nav bar -->
-      <nav class="site-nav">
-        {%- for path in page_paths -%}
-          {%- assign my_page = site.pages | where: "path", path | first -%}
-          {%- if my_page.title -%}
-          <!-- todo iterate thru titles and assign them an icon -->
-          <div>
-            <a class="page-link radio" href="{{ my_page.url | relative_url }}"><img src="{{ site.settings.about.closed | relative_url }}">{{ my_page.title | escape }}</a><span></span>
-          </div>
-          {%- endif -%}
-        {%- endfor -%}
+      <input type="checkbox" id="nav-icon">
+        <label for="nav-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      <nav>
+        <ul class="menu">
+      {%- for path in page_paths -%}
+        {%- assign my_page = site.pages | where: "path", path | first -%}
+        {%- if my_page.title -%}
+        <!-- todo iterate thru titles and assign them an icon -->
+            <li><a class="page-link radio" href="{{ my_page.url | relative_url }}"><img src="{{ site.settings.about.closed | relative_url }}">{{ my_page.title | escape }}</a><span></span></li> 
+        {%- endif -%}
+      {%- endfor -%}
+        </ul>
       </nav>
     </div>
     {%- endif -%}

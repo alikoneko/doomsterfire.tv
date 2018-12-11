@@ -27,7 +27,6 @@ body {
     }
 
     img {
-        width: 100%;
         height: auto;
     }
 
@@ -122,6 +121,15 @@ header {
                         display: none;
                     }
                 }
+            }
+        }
+
+        ul {
+            display: flex;
+
+            li {
+                display: flex;
+                flex-direction: row-reverse;
             }
         }
     }
