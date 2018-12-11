@@ -5,9 +5,11 @@
   {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
   <div>
     <div class="site-brand">
-      <img src="{{ site.brand.img | relative_url }}" alt="{{ site.brand.alt_text }}">
       <div>
-        <a class="site-title radio" rel="author" href="{{ "/" | relative_url }}"> <img src="{{ site.brand.weapon | relative_url }}"> {{ site.title | escape }}</a><span></span>
+        <a class="site-title radio" rel="author" href="{{ "/" | relative_url }}"> 
+          <img src="{{ site.brand.img | relative_url }}" alt="{{ site.brand.alt_text }}">
+          <img src="{{ site.brand.weapon | relative_url }}" id="class-icon"> <span>{{ site.title | escape }}</span>
+        </a><span></span>
       </div>
 
     </div>

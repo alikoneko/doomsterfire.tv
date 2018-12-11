@@ -3,10 +3,12 @@
 $text-color: #dfe6e9; //also border color
 $body-color: #2d3436;
 $gold: #f1c40f;
+$mobile: 768px;
 
 html {
     height: 100%;
     box-sizing: border-box;
+
 }
 // global styles applied to the whole body of the doc
 body {
@@ -49,6 +51,11 @@ body {
 
         }
     }
+
+    @media screen and (max-width: $mobile)
+    {
+        font-size: .75em;
+    }
 }
 
 
@@ -65,8 +72,15 @@ header {
             flex: 1;
 
             img {
-                width: 10%;
+                width: 100%;
+                max-width: 10%;
                 height: auto;
+
+                @media screen and (max-width: $mobile){
+                    width: 100%;
+                    height: auto;
+                    min-width: 30px;
+                }
             }
         }
     }
@@ -82,6 +96,7 @@ header {
         div {
             flex-direction: row-reverse;
             justify-content: flex-end;
+            align-items: center;
 
             .site-title, .page-link {
                 display: flex;
@@ -92,6 +107,21 @@ header {
                     padding-right: 5px;
                 }
 
+            }
+
+            @media screen and (max-width: $mobile) {
+                align-items: initial;
+
+                .site-title, .page-link {
+                    margin-right: 0;
+
+                    span, #class-icon {
+                        display: none; // hide text on small screens
+                    }
+                    & + span {
+                        display: none;
+                    }
+                }
             }
         }
     }

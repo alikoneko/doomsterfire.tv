@@ -1,5 +1,9 @@
+$mobile: 768px;
+
 .radio {
-  // todo: seperate out radio behavior for links
+  // TODO: seperate out radio behavior for links
+  // TODO: use for active links, size down for mobile
+  // TODO: hide for links on mobile
 
   // prettier-ignore
   $radio: (
